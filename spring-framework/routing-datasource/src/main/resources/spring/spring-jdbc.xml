@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath*:jdbc.properties"/>
+
+    <bean id="eastRegionDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
+          p:driverClassName="${jdbc.driver}"
+          p:url="${jdbc.east.url}"
+          p:username="${jdbc.east.username}"
+          p:password="${jdbc.east.password}"/>
+
+    <bean id="westRegionDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
+          p:driverClassName="${jdbc.driver}"
+          p:url="${jdbc.west.url}"
+          p:username="${jdbc.west.username}"
+          p:password="${jdbc.west.password}"/>
+
+</beans>
