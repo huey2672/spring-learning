@@ -6,4 +6,9 @@
 *.iml
 *.DS_Store
 
+/**/HELP.md
+/**/.mvn/
+/**/.gitignore
+/**/mvnw
+/**/mvnw.cmd
 
