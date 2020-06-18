@@ -8,7 +8,7 @@
         <version>2.3.0.RELEASE</version>
         <relativePath/>
     </parent>
-    <groupId>com.huey.learning.springcloud.config.quickstart</groupId>
+    <groupId>com.huey.learning.springcloud.config.highavailability</groupId>
     <artifactId>config-client</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>config-client</name>
