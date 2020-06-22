@@ -15,7 +15,7 @@ public class HelloController {
     private LoadBalancerClient loadBalancerClient;
 
     @RequestMapping("/hello/{name}")
-    public String index(@PathVariable("name") String name) {
+    public String hello(@PathVariable("name") String name) {
 
         ServiceInstance serviceInstance = loadBalancerClient.choose("my-service-provider");
         System.out.println("Get a service instance: " + serviceInstance.getPort());

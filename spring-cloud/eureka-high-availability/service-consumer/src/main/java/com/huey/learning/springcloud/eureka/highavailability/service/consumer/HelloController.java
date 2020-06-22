@@ -25,7 +25,7 @@ public class HelloController {
     private RestTemplate restTemplate;
 
     @RequestMapping("/hello/{name}")
-    public String index(@PathVariable("name") String name) {
+    public String hello(@PathVariable("name") String name) {
 
         List<ServiceInstance> serviceInstanceList = discoveryClient.getInstances("my-service-provider");
         if (!CollectionUtils.isEmpty(serviceInstanceList)) {

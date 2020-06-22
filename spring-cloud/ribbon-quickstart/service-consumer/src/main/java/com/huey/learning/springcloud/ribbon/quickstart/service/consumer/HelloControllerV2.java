@@ -15,7 +15,7 @@ public class HelloControllerV2 {
     private RestTemplate restTemplate;
 
     @RequestMapping("/hello/v2/{name}")
-    public String index(@PathVariable("name") String name) {
+    public String hello(@PathVariable("name") String name) {
 
         return restTemplate.getForObject("http://my-service-provider/hello?name=" + name, String.class);
 
