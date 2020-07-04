@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
     <groupId>com.huey.learning.springcloud.hystrix.dashboard.quickstart</groupId>
-    <artifactId>service-consumer-hystrix</artifactId>
+    <artifactId>turbine</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>service-consumer-hystrix</name>
-    <description>a sample of eureka service consumer with hystrix</description>
+    <name>turbine</name>
+    <description>a turbine sample</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -30,15 +30,11 @@
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+            <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -11,19 +11,19 @@ import org.springframework.web.client.RestTemplate;
  * @author huey
  */
 @RestController
-public class HelloController {
+public class HiController {
 
     @Autowired
     private RestTemplate restTemplate;
 
-    @RequestMapping("/hello/{name}")
-    @HystrixCommand(fallbackMethod = "helloFallback")
-    public String hello(@PathVariable("name") String name) {
-        return restTemplate.getForObject("http://my-service-provider/hello?name=" + name, String.class);
+    @RequestMapping("/hi/{name}")
+    @HystrixCommand(fallbackMethod = "hiFallback")
+    public String hi(@PathVariable("name") String name) {
+        return restTemplate.getForObject("http://my-service-provider/hi?name=" + name, String.class);
     }
 
-    public String helloFallback(String name) {
-        return "Sorry, " + name + "! The <hello> service is unavailable.";
+    public String hiFallback(String name) {
+        return "Sorry, " + name + "! The <hi> service is unavailable.";
     }
 
 }
