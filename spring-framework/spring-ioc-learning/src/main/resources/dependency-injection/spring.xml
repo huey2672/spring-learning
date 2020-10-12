@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="magicWand" class="com.huey.learning.spring.ioc.di.Weapon">
+        <property name="type" value="Magic Wand"/>
+        <property name="weightKg" value="9.5"/>
+    </bean>
+
+    <bean id="pistol" class="com.huey.learning.spring.ioc.di.Weapon">
+        <constructor-arg name="type" value="Pistol"/>
+        <constructor-arg name="weightKg" value="1.2"/>
+    </bean>
+
+    <bean id="sword" class="com.huey.learning.spring.ioc.di.Weapon">
+        <constructor-arg index="0" value="Sword"/>
+        <constructor-arg index="1" value="19.8"/>
+    </bean>
+
+    <bean id="bow" class="com.huey.learning.spring.ioc.di.Weapon">
+        <constructor-arg type="java.lang.String" value="Bow &amp; Arrow"/>
+        <constructor-arg type="java.lang.Double" value="15"/>
+    </bean>
+
+    <bean id="clientService" class="com.huey.learning.spring.ioc.instantiation.ServiceFactory" factory-method="createInstance"/>
+
+    <!-- the factory bean, which contains a method called createClientServiceInstance() -->
+    <bean id="serviceLocator" class="com.huey.learning.spring.ioc.instantiation.ServiceLocator">
+        <!-- inject any dependencies required by this locator bean -->
+    </bean>
+
+    <!-- the bean to be created via the factory bean -->
+    <bean id="antherClientService" factory-bean="serviceLocator" factory-method="createClientServiceInstance"/>
+
+</beans>
