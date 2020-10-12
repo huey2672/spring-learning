@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class DependencyInjectionSample {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         AbstractApplicationContext appCtx = new ClassPathXmlApplicationContext("dependency-injection/spring.xml");
         appCtx.start();

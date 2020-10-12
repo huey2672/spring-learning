@@ -8,7 +8,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class QuickStartSample {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
 
         // creates an application content
         AbstractApplicationContext appCtx = new ClassPathXmlApplicationContext("quick-start/spring.xml");
