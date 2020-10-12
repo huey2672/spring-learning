@@ -4,7 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="clientService" class="com.huey.learning.spring.ioc.instantiation.ServiceFactory"
+    <bean id="serviceOne" class="com.huey.learning.spring.ioc.instantiation.ClientService"/>
+
+    <bean id="serviceTwo" class="com.huey.learning.spring.ioc.instantiation.ServiceFactory"
           factory-method="createInstance"/>
 
     <!-- the factory bean, which contains a method called createClientServiceInstance() -->
@@ -13,6 +15,6 @@
     </bean>
 
     <!-- the bean to be created via the factory bean -->
-    <bean id="antherClientService" factory-bean="serviceLocator" factory-method="createClientServiceInstance"/>
+    <bean id="serviceThree" factory-bean="serviceLocator" factory-method="createClientServiceInstance"/>
 
 </beans>
