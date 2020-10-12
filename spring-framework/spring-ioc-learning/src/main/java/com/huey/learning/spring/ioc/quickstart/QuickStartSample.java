@@ -1,6 +1,5 @@
 package com.huey.learning.spring.ioc.quickstart;
 
-import com.huey.learning.spring.ioc.quickstart.bean.ExampleBean;
 import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

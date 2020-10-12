@@ -4,7 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="example" class="com.huey.learning.spring.ioc.quickstart.bean.ExampleBean">
+    <bean id="example" class="com.huey.learning.spring.ioc.quickstart.ExampleBean">
         <!-- collaborators and configuration for this bean go here -->
     </bean>
 

@@ -1,4 +1,4 @@
-package com.huey.learning.spring.ioc.quickstart.bean;
+package com.huey.learning.spring.ioc.quickstart;
 
 /**
  * @author huey
