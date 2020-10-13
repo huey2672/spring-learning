@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="magicWand" class="com.huey.learning.spring.ioc.namespace.Weapon"
+          c:type="Magic Wand"
+          c:weightKg="9.5"/>
+
+    <bean id="magician" class="com.huey.learning.spring.ioc.namespace.GameCharacter"
+          c:type="Magician"
+          c:level="10"
+          c:weapon-ref="magicWand"/>
+
+</beans>

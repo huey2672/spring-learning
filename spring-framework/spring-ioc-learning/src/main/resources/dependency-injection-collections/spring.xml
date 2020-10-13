@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="plainObject" class="com.huey.learning.spring.ioc.di.collections.PlainObject"/>
+
+    <bean class="com.huey.learning.spring.ioc.di.collections.ComplexObjectOfList">
+        <property name="someList">
+            <list>
+                <value>just some string</value>
+                <ref bean="plainObject"/>
+            </list>
+        </property>
+    </bean>
+
+    <bean class="com.huey.learning.spring.ioc.di.collections.ComplexObjectOfSet">
+        <property name="someSet">
+            <set>
+                <value>just some string</value>
+                <ref bean="plainObject"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean class="com.huey.learning.spring.ioc.di.collections.ComplexObjectOfMap">
+        <property name="someMap">
+            <map>
+                <entry key="strKey" value="just some string"/>
+                <entry key-ref="plainObject" value-ref="plainObject"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean class="com.huey.learning.spring.ioc.di.collections.ComplexObjectOfProps">
+        <property name="someProps">
+            <props>
+                <prop key="key1">value1</prop>
+                <prop key="key2">value2</prop>
+                <prop key="key3">value3</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

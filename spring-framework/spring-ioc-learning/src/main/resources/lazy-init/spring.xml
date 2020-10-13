@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="eb1" class="com.huey.learning.spring.ioc.lazyinit.ExampleBean" lazy-init="true">
+        <constructor-arg value="lazyInitBean"/>
+    </bean>
+
+    <bean id="eb2" class="com.huey.learning.spring.ioc.lazyinit.ExampleBean">
+        <constructor-arg value="eagerInitBean"/>
+    </bean>
+
+</beans>
