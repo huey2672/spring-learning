@@ -11,12 +11,9 @@ public class PNamespaceSample {
     public static void main(String[] args) {
 
         AbstractApplicationContext appCtx = new ClassPathXmlApplicationContext("namespace/spring-p.xml");
-        appCtx.start();
 
         GameCharacter magician = appCtx.getBean("magician", GameCharacter.class);
         System.out.println(magician);
-
-        appCtx.stop();
 
     }
 
