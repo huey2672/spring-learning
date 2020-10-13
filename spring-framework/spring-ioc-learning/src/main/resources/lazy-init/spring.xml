@@ -4,12 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="eb1" class="com.huey.learning.spring.ioc.lazyinit.ExampleBean" lazy-init="true">
-        <constructor-arg value="lazyInitBean"/>
+    <bean id="lazyInitBean" class="com.huey.learning.spring.ioc.lazyinit.ExampleBean" lazy-init="true">
+        <constructor-arg value="lazy-init"/>
     </bean>
 
-    <bean id="eb2" class="com.huey.learning.spring.ioc.lazyinit.ExampleBean">
-        <constructor-arg value="eagerInitBean"/>
+    <bean id="preInitBean" class="com.huey.learning.spring.ioc.lazyinit.ExampleBean">
+        <constructor-arg value="pre-init"/>
     </bean>
 
 </beans>

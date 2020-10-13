@@ -15,8 +15,11 @@ public class LazyInitSample {
         appCtx.start();
         System.out.println("The application context has been initialized.");
 
-        ExampleBean eb1 = appCtx.getBean("eb1", ExampleBean.class);
-        ExampleBean eb2 = appCtx.getBean("eb2", ExampleBean.class);
+        System.out.println("Try to get lazyInitBean.");
+        ExampleBean lazyInitBean = appCtx.getBean("lazyInitBean", ExampleBean.class);
+
+        System.out.println("Try to get preInitBean.");
+        ExampleBean preInitBean = appCtx.getBean("preInitBean", ExampleBean.class);
 
         appCtx.stop();
 
