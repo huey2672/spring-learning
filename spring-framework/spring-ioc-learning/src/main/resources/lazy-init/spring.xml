@@ -4,6 +4,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
     <bean id="lazyInitBean" class="com.huey.learning.spring.ioc.lazyinit.ExampleBean" lazy-init="true">
         <constructor-arg value="lazy-init"/>
     </bean>

@@ -1,7 +1,6 @@
 package com.huey.learning.spring.ioc.di.collections;
 
-import com.huey.learning.spring.ioc.di.Weapon;
-import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -11,8 +10,7 @@ public class DependencyInjectionOfCollectionSample {
 
     public static void main(String[] args) {
 
-        AbstractApplicationContext appCtx = new ClassPathXmlApplicationContext("dependency-injection-collections/spring.xml");
-        appCtx.start();
+        ApplicationContext appCtx = new ClassPathXmlApplicationContext("dependency-injection-collections/spring.xml");
 
         ComplexObjectOfList complexObjectOfList = appCtx.getBean(ComplexObjectOfList.class);
         System.out.println(complexObjectOfList);
@@ -25,8 +23,6 @@ public class DependencyInjectionOfCollectionSample {
 
         ComplexObjectOfProps complexObjectOfProps = appCtx.getBean(ComplexObjectOfProps.class);
         System.out.println(complexObjectOfProps);
-
-        appCtx.stop();
 
     }
 
