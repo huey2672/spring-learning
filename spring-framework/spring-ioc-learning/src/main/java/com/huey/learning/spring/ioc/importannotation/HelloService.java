@@ -1,7 +1,7 @@
 package com.huey.learning.spring.ioc.importannotation;
 
 /**
- * @author zhengzs
+ * @author huey
  */
 public class HelloService {
 
