@@ -8,18 +8,12 @@ import org.springframework.context.annotation.Profile;
  * @author huey
  */
 @Configuration
-public class ApplicationConfiguration {
+@Profile("development")
+public class DevelopmentConfiguration {
 
-    @Bean(name = "dataSource")
-    @Profile("dev")
-    public ExampleBean getDevExampleBean() {
+    @Bean
+    public ExampleBean exampleBean() {
         return new ExampleBean("DevelopmentBean");
-    }
-
-    @Bean(name = "dataSource")
-    @Profile("test")
-    public ExampleBean getTestExampleBean() {
-        return new ExampleBean("TestBean");
     }
 
 }

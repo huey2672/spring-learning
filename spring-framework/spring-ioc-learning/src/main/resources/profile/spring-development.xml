@@ -3,13 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd"
-       profile="dev">
+       profile="development">
 
-
-    <bean id="example" class="com.huey.learning.spring.ioc.quickstart.ExampleBean">
-        <!-- collaborators and configuration for this bean go here -->
-    </bean>
-
-    <!-- more bean definitions go here -->
+    <!--
+        ...
+    -->
 
 </beans>
