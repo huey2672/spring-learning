@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.nio.charset.Charset;
 
 /**
- * @author zhengzs
+ * @author huey
  */
 public class FileSystemResourceSample {
 
