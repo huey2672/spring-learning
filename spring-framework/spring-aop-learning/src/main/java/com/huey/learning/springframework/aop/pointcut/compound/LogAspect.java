@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Aspect
 public class LogAspect {
 
-    @Before("within(com.huey.learning..*) && execution(* sayHello(..))")
+    @Before("within(com.huey.learning.springframework.aop..*) && execution(* sayHello(..))")
     public void log(JoinPoint joinPoint) {
         System.out.printf("%s is invoked at %s\n",
                 joinPoint.getSignature().toShortString(), LocalDateTime.now());
