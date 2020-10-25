@@ -1,4 +1,4 @@
-package com.huey.learning.springframework.aop.pointcut.named;
+package com.huey.learning.springframework.aop.aspectj.pointcut.named;
 
 import org.aspectj.lang.annotation.Pointcut;
 

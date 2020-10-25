@@ -1,4 +1,4 @@
-package com.huey.learning.springframework.aop.pointcut.annotation;
+package com.huey.learning.springframework.aop.aspectj.pointcut.annotation;
 
 public interface HelloService {
 

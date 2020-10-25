@@ -1,7 +1,7 @@
-package com.huey.learning.springframework.aop.pointcut.compound;
+package com.huey.learning.springframework.aop.aspectj.pointcut.compound;
 
-import com.huey.learning.springframework.aop.pointcut.annotation.ApplicationConfiguration;
-import com.huey.learning.springframework.aop.pointcut.annotation.HelloService;
+import com.huey.learning.springframework.aop.aspectj.pointcut.annotation.ApplicationConfiguration;
+import com.huey.learning.springframework.aop.aspectj.pointcut.annotation.HelloService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -14,7 +14,7 @@ public class CompoundOperationSample {
 
         ApplicationContext appCtx = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
 
-        HelloService helloService = appCtx.getBean(HelloService.class);
+        com.huey.learning.springframework.aop.aspectj.pointcut.annotation.HelloService helloService = appCtx.getBean(HelloService.class);
 
         helloService.sayHello("Huey");
         helloService.sayGoodbye("Huey");

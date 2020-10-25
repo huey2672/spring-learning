@@ -1,4 +1,4 @@
-package com.huey.learning.springframework.aop.pointcut.compound;
+package com.huey.learning.springframework.aop.aspectj.pointcut.named;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Aspect
 public class LogAspect {
 
-    @Before("within(com.huey.learning.springframework.aop..*) && execution(* sayHello(..))")
+    @Before("com.huey.learning.springframework.aop.aspectj.pointcut.named.LogPointcut.inPkgSayHello()")
     public void log(JoinPoint joinPoint) {
         System.out.printf("%s is invoked at %s\n",
                 joinPoint.getSignature().toShortString(), LocalDateTime.now());

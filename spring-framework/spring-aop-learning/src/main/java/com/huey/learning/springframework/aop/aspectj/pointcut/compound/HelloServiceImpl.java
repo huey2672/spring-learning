@@ -1,7 +1,7 @@
-package com.huey.learning.springframework.aop.pointcut.compound;
+package com.huey.learning.springframework.aop.aspectj.pointcut.compound;
 
-import com.huey.learning.springframework.aop.pointcut.annotation.HelloService;
-import com.huey.learning.springframework.aop.pointcut.annotation.Loggable;
+import com.huey.learning.springframework.aop.aspectj.pointcut.annotation.HelloService;
+import com.huey.learning.springframework.aop.aspectj.pointcut.annotation.Loggable;
 import org.springframework.stereotype.Service;
 
 @Service

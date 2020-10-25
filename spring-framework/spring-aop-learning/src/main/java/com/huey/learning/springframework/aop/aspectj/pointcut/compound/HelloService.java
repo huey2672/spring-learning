@@ -1,4 +1,4 @@
-package com.huey.learning.springframework.aop.pointcut.compound;
+package com.huey.learning.springframework.aop.aspectj.pointcut.compound;
 
 public interface HelloService {
 

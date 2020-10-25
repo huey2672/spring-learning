@@ -1,4 +1,4 @@
-package com.huey.learning.springframework.aop.pointcut.annotation;
+package com.huey.learning.springframework.aop.aspectj.pointcut.annotation;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

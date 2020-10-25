@@ -1,4 +1,4 @@
-package com.huey.learning.springframework.aop.pointcut.annotation;
+package com.huey.learning.springframework.aop.aspectj.pointcut.annotation;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Component
 public class LogAspect {
 
-    @Before("@annotation(com.huey.learning.springframework.aop.pointcut.annotation.Loggable)")
+    @Before("@annotation(com.huey.learning.springframework.aop.aspectj.pointcut.annotation.Loggable)")
     public void log(JoinPoint joinPoint) {
         System.out.printf("%s is invoked at %s\n",
                 joinPoint.getSignature().toShortString(), LocalDateTime.now());
