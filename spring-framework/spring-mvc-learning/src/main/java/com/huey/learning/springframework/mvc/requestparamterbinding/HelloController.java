@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-@Controller
+@Controller("HelloController1")
 public class HelloController {
 
     @RequestMapping(path = "/hello1", method = RequestMethod.POST)
