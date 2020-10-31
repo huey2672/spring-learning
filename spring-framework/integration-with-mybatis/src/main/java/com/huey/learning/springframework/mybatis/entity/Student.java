@@ -1,4 +1,4 @@
-package com.huey.learning.springframework.jdbc.entity;
+package com.huey.learning.springframework.mybatis.entity;
 
 import lombok.Data;
 
@@ -6,7 +6,9 @@ import lombok.Data;
 public class Student {
 
     private Integer studId;
+
     private String studName;
+
     private String sex;
 
 }

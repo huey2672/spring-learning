@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.huey.learning.springframework.mybatis.mapper.StudentMapper">
+
+    <resultMap type="com.huey.learning.springframework.mybatis.entity.Student" id="studentMap">
+        <id property="studId" column="STUD_ID"/>
+        <result property="studName" column="STUD_NAME"/>
+        <result property="sex" column="SEX"/>
+    </resultMap>
+
+    <insert id="insertStudent" parameterType="com.huey.learning.springframework.mybatis.entity.Student">
+        INSERT INTO STUDENT(STUD_ID, STUD_NAME, SEX)
+        VALUES(#{studId}, #{studName}, #{sex})
+    </insert>
+
+    <select id="getStudentById" resultMap="studentMap">
+        SELECT * FROM STUDENT WHERE STUD_ID = #{studId}
+    </select>
+
+</mapper>
