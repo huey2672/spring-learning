@@ -23,4 +23,14 @@ public class RedisTemplateTest {
 
     }
 
+    @Test
+    public void testRedisTemplateWithSerializer() {
+
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("serializer/spring.xml");
+        RedisTemplate redisTemplate = ctx.getBean(RedisTemplate.class);
+
+        redisTemplate.opsForValue().set("foo", "bar");
+
+    }
+
 }
