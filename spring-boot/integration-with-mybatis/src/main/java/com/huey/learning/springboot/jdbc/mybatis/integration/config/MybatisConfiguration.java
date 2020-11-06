@@ -8,5 +8,5 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @MapperScan(basePackages = "com.huey.learning.springboot.jdbc.mybatis.integration.mapper")
-public class ApplicationConfiguration {
+public class MybatisConfiguration {
 }
