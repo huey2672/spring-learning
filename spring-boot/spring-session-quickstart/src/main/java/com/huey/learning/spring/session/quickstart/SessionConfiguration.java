@@ -10,4 +10,9 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 @EnableRedisHttpSession
 public class SessionConfiguration {
 
+//    @Bean
+//    public RedisSerializer springSessionDefaultRedisSerializer() {
+//        return new GenericJackson2JsonRedisSerializer();
+//    }
+
 }
