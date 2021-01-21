@@ -7,6 +7,7 @@ import org.springframework.boot.actuate.endpoint.annotation.Selector;
 import org.springframework.boot.actuate.endpoint.annotation.WriteOperation;
 import org.springframework.stereotype.Component;
 
+import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -27,8 +28,9 @@ public class FeaturesEndpoint {
     }
 
     @WriteOperation
-    public void configureFeature(@Selector String name, String feature) {
+    public Map<String, String> configureFeature(@Selector String name, String feature) {
         features.put(name, feature);
+        return Collections.singletonMap(name, feature);
     }
 
     @DeleteOperation
