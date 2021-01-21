@@ -1,4 +1,4 @@
-package com.huey.learning.springboot.actuator.quickstart;
+package com.huey.learning.springboot.actuator.endpoint.custom;
 
 import org.springframework.boot.actuate.endpoint.annotation.DeleteOperation;
 import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
