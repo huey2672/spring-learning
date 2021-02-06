@@ -21,7 +21,7 @@ public class SentinelQuickstart {
 
         while (true) {
 
-            try (Entry entry = SphU.entry("MyResource")) {
+            try (Entry entry = SphU.entry("SentinelQuickstart")) {
                 // 被保护的逻辑
                 System.out.println("Hello, Sentinel!");
             }
@@ -40,7 +40,7 @@ public class SentinelQuickstart {
     private static void initFlowRules() {
 
         FlowRule rule = new FlowRule();
-        rule.setResource("MyResource");
+        rule.setResource("SentinelQuickstart");
         rule.setGrade(RuleConstant.FLOW_GRADE_QPS);
         // set limit QPS to 20
         rule.setCount(20);
