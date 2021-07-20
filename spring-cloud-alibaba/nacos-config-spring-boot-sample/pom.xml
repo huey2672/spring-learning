@@ -15,7 +15,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <nacos-spring-boot.version>0.2.7</nacos-spring-boot.version>
+        <nacos-spring-boot.version>0.2.9</nacos-spring-boot.version>
     </properties>
 
     <dependencies>

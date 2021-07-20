@@ -1,12 +1,11 @@
 package com.huey.learning.nacos.springboot.sample;
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
-@Controller
+@RestController
 @RequestMapping("config")
 public class ConfigController {
 
@@ -14,7 +13,6 @@ public class ConfigController {
     private boolean useLocalCache;
 
     @GetMapping("/get")
-    @ResponseBody
     public boolean get() {
         return useLocalCache;
     }
