@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: path_route
+          predicates:
+            - Path=/example
+          uri: http://baidu.com
+        - id: query_route
+          predicates:
+            - Query=foo, Foo
+          filters:
+            - AddResponseHeader=X-Bar, Bar
+          uri: http://example.com
