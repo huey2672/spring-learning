@@ -8,7 +8,7 @@
         <version>2.7.14</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.example</groupId>
+    <groupId>com.huey.learning.springcloud.gateway</groupId>
     <artifactId>gateway-quickstart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gateway-quickstart</name>

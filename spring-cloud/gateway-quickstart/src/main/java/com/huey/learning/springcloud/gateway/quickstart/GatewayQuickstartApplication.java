@@ -1,4 +1,4 @@
-package com.example.gatewayquickstart;
+package com.huey.learning.springcloud.gateway.quickstart;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
