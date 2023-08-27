@@ -1,0 +1,74 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+
+#        # After 断言路由
+#        - id: after_route
+#          uri: http://www.example.com
+#          predicates:
+#            - After=2023-08-23T00:00:00+08:00[Asia/Shanghai]
+
+#        # Before 断言路由
+#        - id: before_route
+#          uri: http://www.example.com
+#          predicates:
+#            - Before=2023-08-24T00:00:00+08:00[Asia/Shanghai]
+
+#        # Between 断言路由
+#        - id: between_route
+#          uri: http://www.example.com
+#          predicates:
+#            - Between=2023-08-23T00:00:00+08:00[Asia/Shanghai],2023-08-24T00:00:00+08:00[Asia/Shanghai]
+
+#        # Cookie 断言路由
+#        - id: cookie_route
+#          uri: http://www.example.com
+#          predicates:
+#            - Cookie=foo, b.r
+
+#        # Header 断言路由
+#        - id: header_route
+#          uri: http://www.example.com
+#          predicates:
+#            - Header=X-Request-Id, \d+
+
+#        # Host 断言路由
+#        - id: host_route
+#          uri: http://www.example.com
+#          predicates:
+#            - Host=**.example.com
+
+#        # Method 断言路由
+#        - id: method_route
+#          uri: http://www.example.com
+#          predicates:
+#            - Method=GET, HEAD
+
+#        # Path 断言路由
+#        - id: path_route
+#          uri: http://www.example.com
+#          predicates:
+#            - Path=/api/**
+
+#        # Query 断言路由
+#        - id: query_route
+#          uri: http://www.example.com
+#          predicates:
+#            - Query=foo, b.r
+
+#        # RemoteAddr 断言路由
+#        - id: remote_addr_route
+#          uri: http://www.example.com
+#          predicates:
+#            - RemoteAddr=192.168.1.1/24
+
+        # 自定义断言路由
+        - id: vip_route
+          uri: http://www.example.com
+          predicates:
+            - Vip=true
+        - id: regular_route
+          uri: http://www.baidu.com
+          predicates:
+            - Vip=false
