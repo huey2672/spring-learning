@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 public class MyGatewayConfiguration {
 
     @Bean
-    public VipRoutePredicateFactory betaTestRoutePredicateFactory(VipService vipService) {
+    public VipRoutePredicateFactory vipRoutePredicateFactory(VipService vipService) {
         return new VipRoutePredicateFactory(vipService);
     }
 
