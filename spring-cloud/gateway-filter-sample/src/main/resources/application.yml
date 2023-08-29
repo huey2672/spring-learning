@@ -1,0 +1,102 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+
+#        - id: add_request_parameter_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - AddRequestParameter=foo, 123
+
+#        - id: remove_request_parameter_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - RemoveRequestParameter=foo
+
+#        - id: add_request_header_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - AddRequestHeader=X-Request-Foo, 123
+
+#        - id: set_request_header_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - SetRequestHeader=X-Request-Foo, 123
+
+#        - id: remove_request_header_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - RemoveRequestHeader=X-Request-Foo
+
+#        - id: add_response_header_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - AddResponseHeader=X-Response-Foo, 123
+
+#        - id: set_response_header_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - SetResponseHeader=X-Response-Foo, 123
+
+#        - id: remove_response_header_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - RemoveResponseHeader=X-Response-Foo
+
+#        - id: prefix_path_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - PrefixPath=/mypath
+
+#        - id: rewrite_path_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/foo/**
+#          filters:
+#            - RewritePath=/foo/(?<segment>.*), /bar/$\{segment}
+
+#        - id: strip_prefix_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/foo/bar/api/**
+#          filters:
+#            - StripPrefix=2
+
+#        - id: redirect_to_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - RedirectTo=Found, http://localhost:8000
+
+#        - id: set_status_route
+#          uri: http://localhost:8000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - SetStatus=404
+
+        - id: custom-filter-route
+          uri: http://localhost:8000
+          predicates:
+            - Path=/**
+          filters:
+            - Timing=X-Elapsed-Time
