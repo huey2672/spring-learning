@@ -14,15 +14,6 @@ public class SenderController {
     @Resource
     private Source source;
 
-    public SenderController() {
-        System.out.println("SenderController.");
-    }
-
-    @GetMapping("hello")
-    public String hello() {
-        return "hello";
-    }
-
     @RequestMapping("send")
     public String send(String message) {
         source.output().send(MessageBuilder.withPayload(message).build());
