@@ -1,0 +1,19 @@
+server:
+  port: 8020
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: spring-cloud-stream-quickstart
+          binder: mybinder
+      binders:
+        mybinder:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                host: 192.168.2.21
+                port: 5672
+                username: huey
+                password: huey
