@@ -1,0 +1,5 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost/mybatis_learning
+    username: root
+    password: huey2672
