@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-ai-quickstart
+  ai:
+    openai:
+      base-url: http://127.0.0.1:8080
+      api-key: a8fc9c38
+      chat:
+        options:
+          model: Qwen2.5-7B
