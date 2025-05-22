@@ -8,10 +8,13 @@ spring:
   application:
     name: spring-ai-quickstart
   ai:
-
     openai:
       base-url: https://api-inference.modelscope.cn/
       api-key:
       chat:
         options:
           model: Qwen/Qwen2.5-72B-Instruct
+logging:
+  level:
+    root: info
+    org.springframework.ai.chat.client.advisor: debug
