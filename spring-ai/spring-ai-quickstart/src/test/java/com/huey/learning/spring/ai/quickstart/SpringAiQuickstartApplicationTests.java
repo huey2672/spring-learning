@@ -10,4 +10,7 @@ class SpringAiQuickstartApplicationTests {
     void contextLoads() {
     }
 
+
+
+
 }

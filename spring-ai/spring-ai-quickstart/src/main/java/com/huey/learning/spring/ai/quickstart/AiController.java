@@ -1,20 +1,38 @@
 package com.huey.learning.spring.ai.quickstart;
 
-import jakarta.annotation.Resource;
-import org.springframework.ai.chat.model.ChatModel;
+import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.prompt.ChatOptions;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import reactor.core.publisher.Flux;
 
+/**
+ * @author huey
+ */
 @RestController
 @RequestMapping("/ai")
 public class AiController {
 
-    @Resource
-    private ChatModel chatModel;
+    private final ChatClient chatClient;
 
-    @RequestMapping("/chat")
-    public Object chat(String message) {
-        return chatModel.call(message);
+    public AiController(ChatClient.Builder chatClientBuilder) {
+        this.chatClient = chatClientBuilder.build();
+    }
+
+    @RequestMapping("/chat/call")
+    public String chat(String message) {
+        return this.chatClient.prompt()
+                .user(message)
+                .call()
+                .content();
+    }
+
+    @RequestMapping("/chat/stream")
+    public Flux<String> stream(String message) {
+        return this.chatClient.prompt()
+                .user(message)
+                .stream()
+                .content();
     }
 
 }
