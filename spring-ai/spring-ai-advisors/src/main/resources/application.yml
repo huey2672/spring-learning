@@ -1,0 +1,16 @@
+spring:
+  application:
+    name:
+      spring-ai-advisors
+  ai:
+    openai:
+      base-url: https://api-inference.modelscope.cn/
+      api-key: b9f095df-2473-4165-871d-f65b59bdf127
+      chat:
+        options:
+#          model: Qwen/Qwen2.5-72B-Instruct
+          model: deepseek-ai/DeepSeek-R1
+logging:
+  level:
+    root: info
+    org.springframework.ai.chat.client.advisor: debug
