@@ -10,10 +10,17 @@ spring:
   ai:
     openai:
       base-url: https://api-inference.modelscope.cn/
-      api-key:
+      api-key: b9f095df-2473-4165-871d-f65b59bdf127
       chat:
         options:
           model: Qwen/Qwen2.5-72B-Instruct
+#          model: deepseek-ai/DeepSeek-R1
+    mcp:
+      client:
+        type: sync
+        stdio:
+          servers-configuration: classpath:mcp-server-bmap.json
+
 logging:
   level:
     root: info
