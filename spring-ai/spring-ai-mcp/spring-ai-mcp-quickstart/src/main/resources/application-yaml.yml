@@ -1,0 +1,13 @@
+spring:
+  ai:
+    mcp:
+      client:
+        type: sync
+        stdio:
+          connections:
+            filesystem:
+              command: npx
+              args:
+                - "-y"
+                - "@modelcontextprotocol/server-filesystem"
+                - "."

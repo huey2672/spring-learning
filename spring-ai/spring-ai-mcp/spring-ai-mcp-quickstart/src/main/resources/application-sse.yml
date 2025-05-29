@@ -1,0 +1,10 @@
+spring:
+  ai:
+    mcp:
+      client:
+        type: sync
+        sse:
+          connections:
+            mcp-12306:
+              url: https://mcp.api-inference.modelscope.cn
+              sse-endpoint: /326f935dff5e41/sse

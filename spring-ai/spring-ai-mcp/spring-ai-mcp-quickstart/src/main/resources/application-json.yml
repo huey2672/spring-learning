@@ -1,0 +1,7 @@
+spring:
+  ai:
+    mcp:
+      client:
+        type: sync
+        stdio:
+          servers-configuration: classpath:mcp-server-filesystem.json

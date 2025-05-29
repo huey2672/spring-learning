@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: spring-ai-mcp-stdio-server
+  ai:
+    mcp:
+      server:
+        name: my-mcp-stdio-server
+        version: 1.0.0
+        type: sync
+        stdio: true
