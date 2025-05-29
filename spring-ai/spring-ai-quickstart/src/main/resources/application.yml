@@ -7,6 +7,8 @@ server:
 spring:
   application:
     name: spring-ai-quickstart
+  main:
+    banner-mode: off
   ai:
     openai:
       base-url: https://api-inference.modelscope.cn/
@@ -15,11 +17,6 @@ spring:
         options:
           model: Qwen/Qwen2.5-72B-Instruct
 #          model: deepseek-ai/DeepSeek-R1
-    mcp:
-      client:
-        type: sync
-        stdio:
-          servers-configuration: classpath:mcp-server-bmap.json
 
 logging:
   level:
